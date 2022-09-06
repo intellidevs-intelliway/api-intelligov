@@ -5,7 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import './database.js';
 import swaggerUi from 'swagger-ui-express';
-import swaggerFile from '../swagger_output.json'
+import swaggerFile from '../swagger_output.json' assert { type: 'json' };
 
 class App {
 
