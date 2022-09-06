@@ -1,6 +1,6 @@
-import Log from "../configs/logger"
-import Company from "../models/Company";
-import User from "../models/User";
+import Log from "../configs/logger.js"
+import Company from "../models/Company.js";
+import User from "../models/User.js";
 
 class CompanyController{
     async list(req,res){

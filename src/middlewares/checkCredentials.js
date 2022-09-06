@@ -1,5 +1,5 @@
 import { verify } from "jsonwebtoken";
-import Log from "../configs/logger";
+import Log from "../configs/logger.js";
 
 export default async function (req, res, next){
     const authHeader = req.headers.authorization;

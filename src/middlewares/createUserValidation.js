@@ -1,5 +1,5 @@
 import {body} from 'express-validator';
-import User from '../models/User';
+import User from '../models/User.js';
 
 export default [
     body('fullname').notEmpty().withMessage('O campo nome é obrigatório!'),

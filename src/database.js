@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import moment from "moment-timezone";
-import Log from "./configs/logger";
+import Log from "./configs/logger.js";
 
 class Database{
     constructor(){

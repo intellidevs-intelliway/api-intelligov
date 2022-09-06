@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import nodemailerhbs from 'nodemailer-express-handlebars';
-import hbsConfig from '../configs/hbs';
+import hbsConfig from '../configs/hbs.js';
 
 class Mail{
     constructor(){

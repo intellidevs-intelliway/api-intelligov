@@ -1,10 +1,10 @@
 import moment from "moment-timezone";
 import bcryptjs from "bcryptjs";
 import jwt from 'jsonwebtoken';
-import Log from "../configs/logger";
-import Utils from "../helpers/Utils";
-import mailService from "../services/Mail";
-import User from "../models/User";
+import Log from "../configs/logger.js";
+import Utils from "../helpers/Utils.js";
+import mailService from "../services/Mail.js";
+import User from "../models/User.js";
 
 class AuthController{
 

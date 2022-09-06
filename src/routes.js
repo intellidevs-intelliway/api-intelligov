@@ -1,8 +1,8 @@
 import { Router } from "express";
-import AuthController from "./controllers/AuthController";
-import UserController from "./controllers/UserController";
-import CompanyController from "./controllers/CompanyController";
-import createUserValidation from "./middlewares/createUserValidation";
+import AuthController from "./controllers/AuthController.js";
+import UserController from "./controllers/UserController.js";
+import CompanyController from "./controllers/CompanyController.js";
+import createUserValidation from "./middlewares/createUserValidation.js";
 
 const routes = new Router();
 
