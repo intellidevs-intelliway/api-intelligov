@@ -6,8 +6,8 @@ const doc = {
       description: '',
     },
     servers:[
-      {url:'http://localhost:3333'}, 
-      // {url:'https://aplysia-backend.herokuapp.com'}
+      {url:'https://api-intelligov.onrender.com'},
+      {url:'http://localhost:3333'}
     ],
     securityDefinitions:{
       bearerAuth: {
