@@ -1,4 +1,5 @@
 import { Router } from "express";
+import checkCredentials from "./middlewares/checkCredentials.js"
 import AuthController from "./controllers/AuthController.js";
 import UserController from "./controllers/UserController.js";
 import CompanyController from "./controllers/CompanyController.js";
@@ -13,6 +14,7 @@ routes.get('/', async function (req, res) {
 routes.post('/login',AuthController.store);
 
 //Rota travada
+routes.use(checkCredentials);
 routes.post('/user/recovery',AuthController.recovery);
 routes.get('/user',UserController.list);
 routes.post('/user',createUserValidation,UserController.store);
