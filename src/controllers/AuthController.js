@@ -35,7 +35,7 @@ class AuthController{
            
             const token = jwt.sign({},process.env.SECRET,{
                 expiresIn:process.env.EXPIRESIN,
-                subject:String(user.show())
+                subject:JSON.stringify(user.show())
             });
             Log.logger.info({message:`Usuário ${user.name} acaba de se autenticar!`,date:now.format("YYYY-MM-DD HH:mm")})
             return res.status(200).json({token});

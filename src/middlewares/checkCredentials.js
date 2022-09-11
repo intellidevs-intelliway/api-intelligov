@@ -1,4 +1,4 @@
-
+import moment from "moment-timezone";
 import pkg from 'jsonwebtoken';
 const { verify } = pkg;
 import Log from "../configs/logger.js";
@@ -16,12 +16,13 @@ export default async function (req, res, next){
     try {
         const decoded = await verify(token,process.env.SECRET);
         const user = JSON.parse(decoded.sub);
+        console.log(user)
         req.userId = user.id;
         return next();
     } catch (error) {
         const date = new Date();
         const now = moment.tz(date,'America/Sao_Paulo');
         Log.logger.error({message:error.message,date:now.format("YYYY-MM-DD HH:mm")});
-        return res.status(401).json({ message: 'Token inexistente!' });
+        return res.status(401).json({ message: 'Erro docoder Token!' });
     }    
 }
